@@ -61,16 +61,7 @@ def run(argv=None, save_main_session=True):
 
   parser = argparse.ArgumentParser()
   
-  '''parser.add_argument('--input',
-                      dest='input',
-                      default='train-v2.0.json',
-                      help='Input file to process.')
-  parser.add_argument('--output',
-                      dest='output',
-                      # CHANGE 1/5: The Google Cloud Storage path is required
-                      # for outputting the results.
-                      default='gs://mybucketgon/jsonBQ/temp',
-                      help='Output file to write results to.')'''
+  
   known_args, pipeline_args = parser.parse_known_args(argv)
   pipeline_args.extend([
       '--runner=DataflowRunner',
